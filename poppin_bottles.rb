@@ -18,11 +18,12 @@ def total_bottles(initial_investment)
     full_bottles += new_bottles
     caps = leftover_caps
   end
-  puts "An initial investment of #{initial_investment} will return a total of #{total_bottles} bottles, with #{empties} empty bottles, #{caps} caps, and $#{dollars} left over."
+  puts "An initial investment of $#{initial_investment} will return a total of #{total_bottles} bottles, with #{empties} empty bottles, #{caps} caps, and $#{dollars} left over."
 end
 
+# # Test with an initial purchase of *
+# puts total_bottles(10)  # => 15
 
-# Test with an initial purchase of *
-puts total_bottles(10)  # => 15
-puts total_bottles(20)  # => 35
-puts total_bottles(30)  # => 55
+puts "How much money would you like to spend on pop today?"
+amount = gets.chomp.to_i
+total_bottles(amount)
