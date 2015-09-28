@@ -28,7 +28,9 @@ end
 
 # # Test with an initial purchase of *
 # puts @total_bottles(10)  # => 15
-
-puts "How much money would you like to spend on pop today?"
-amount = gets.chomp.to_i
-total_bottles(amount)
+loop do
+  puts "How much money would you like to spend on pop today?\nEnter 0 to exit."
+  amount = gets.chomp.to_i
+  break if amount == 0
+  total_bottles(amount)
+end
